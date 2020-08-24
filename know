@@ -34,8 +34,8 @@ cd Django/
 
 
 sudo apt-get install python3-pip
-pip install django
-sudo pip install django --upgrade
+pip3 install django
+sudo pip3 install django --upgrade
 sudo django-admin startproject coding .
 python3 manage.py runserver
 sudo django-admin  startapp products
@@ -98,3 +98,11 @@ python manage.py migrate
 Then we have to download sqllite to see database
 --------------------------------------------------------------
 python3 manage.py createsuperuser
+-------------------------------------------------------------
+go to admin.py
+you have to import from models.py
+you have to write the class name
+import .models products(products is a class name)
+
+from .models import product
+admin.site.register(product)
