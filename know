@@ -1,15 +1,15 @@
 cd Django/
-  188  ls
-  189  sudo apt-get install python3
-  190  touch .gitignore
-  191  git add .
-  192  git commit -m"django"
-  193  git init
-  194  git add .
-  195  git commit -m"django"
-  196  git remote add origin https://github.com/arunvijay10/django.git
-  197  git push -u origin master
-  198  sudo apt-get install python3.6
+  ls
+    sudo apt-get install python3
+    touch .gitignore
+    git add .
+    git commit -m"django"
+    git init
+    git add .
+    git commit -m"django"
+    git remote add origin https://github.com/arunvijay10/django.git
+    git push -u origin master
+    sudo apt-get install python3.6
   199  python --version
   200  sudo apt-get install python3.6
   201  python3 -V
@@ -37,4 +37,45 @@ sudo apt-get install python3-pip
 pip install django
 sudo pip install django --upgrade
 sudo django-admin startproject coding .
-ython3 manage.py runserver
+python3 manage.py runserver
+sudo django-admin  startapp products
+
+
+in products make file name as-----
+                                  |
+                                  |
+                                  |
+                                  -----urls.py
+-------------------------------------------------------------------
+In  project url we have to add
+*Include And Path
+from django.contrib import admin
+from django.urls import path,include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path("",include('products.urls')),
+]
+
+------------------------------------------------------------------
+In app we have import 
+*View
+add same url of project
+from django.contrib import admin
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path("",views.index,name="home")
+    
+]
+index is a function that is created inside a view file
+------------------------------------------------------------------
+Then we will be working on models
+
+
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+-----------------------------------------------------------------
+Then we have to download sqllite to see database
