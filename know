@@ -30,3 +30,11 @@ cd Django/
   216  sudo pip3 install django3.0.1
   217  sudo pip3 install django=3.0.1
   218  sudo pip3 install django==3.0.1
+-------------------------------------------------------------------------------------
+
+
+sudo apt-get install python3-pip
+pip install django
+sudo pip install django --upgrade
+sudo django-admin startproject coding .
+ython3 manage.py runserver
