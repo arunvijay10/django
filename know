@@ -92,5 +92,7 @@ and in setting installed apps
 'products.apps.ProductsConfig'
 -------------------------------------------------------------
 python manage.py makemigrations
+python manage.py migrate
+
 ---------------------------------------------------------------
 Then we have to download sqllite to see database
