@@ -59,8 +59,12 @@ urlpatterns = [
 
 ------------------------------------------------------------------
 In app we have import 
+
 *View
+
 add same url of project
+
+
 from django.contrib import admin
 from django.urls import path
 from . import views
@@ -77,5 +81,16 @@ Then we will be working on models
 class Person(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
+
+
 -----------------------------------------------------------------
+in settings go to installed apps and add products
+
+in apps.py go to products.config(copy-->ProductsConfig)
+
+and in setting installed apps
+'products.apps.ProductsConfig'
+-------------------------------------------------------------
+python manage.py makemigrations
+---------------------------------------------------------------
 Then we have to download sqllite to see database
