@@ -96,3 +96,5 @@ python manage.py migrate
 
 ---------------------------------------------------------------
 Then we have to download sqllite to see database
+--------------------------------------------------------------
+python3 manage.py createsuperuser
