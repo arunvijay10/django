@@ -154,3 +154,8 @@ after includuing the file go to http://127.0.0.1:8000/static/new.txt
 
 
 changing admin pannel
+admin.site.site_header = 'xyz admin'
+admin.site.site_title = 'xyz admin'
+admin.site.site_url = 'http:/xyz.com/'
+admin.site.index_title = 'xyz administration'
+admin.empty_value_display = '**Empty**'
