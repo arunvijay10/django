@@ -111,3 +111,37 @@ class productadmin(admin.ModelAdmin):
     list_display=('name','price','image')
 admin.site.register(product,productadmin)
 -----------------------------------------------------------------
+
+changes in view.py
+from django.shortcuts import render
+from django.http import HttpResponse
+from .models import product (Importing model)
+------------------------------------------------------------------
+
+
+in product folder we will be creating a folder name as 
+templates
+
+inside we have to create a html file
+
+
+inside views.py we will make a changes
+
+def index(request):
+    # return HttpResponse("Hello");
+    return render(request,'index.html')
+
+
+
+---------------------------------------------------------------
+new 
+create a static file and templates outside the all folder
+
+
+go to setting and move downwords to static files
+and open the link give and copy:
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    '/var/www/static/',
+]
