@@ -105,4 +105,9 @@ you have to write the class name
 import .models products(products is a class name)
 
 from .models import product
-admin.site.register(product)
+#admin.site.register(product)
+
+class productadmin(admin.ModelAdmin):
+    list_display=('name','price','image')
+admin.site.register(product,productadmin)
+-----------------------------------------------------------------
