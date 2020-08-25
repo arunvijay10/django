@@ -141,7 +141,12 @@ create a static file and templates outside the all folder
 go to setting and move downwords to static files
 and open the link give and copy:
 
+inside static dile i have created a new.txt
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+
+
+after includuing the file go to http://127.0.0.1:8000/static/new.txt
