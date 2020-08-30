@@ -159,3 +159,17 @@ admin.site.site_title = 'xyz admin'
 admin.site.site_url = 'http:/xyz.com/'
 admin.site.index_title = 'xyz administration'
 admin.empty_value_display = '**Empty**'
+
+mysql database engine
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangodatabase',
+        'USER': 'dbadmin',
+        'PASSWORD': '12345',
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
+}
+
