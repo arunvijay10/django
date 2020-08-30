@@ -165,11 +165,32 @@ mysql database engine
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'djangodatabase',
-        'USER': 'dbadmin',
-        'PASSWORD': '12345',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+        'NAME': 'makeadd',       - - - - - | (same name as created in a database) 
+        'USER': 'dbadmin',                 |
+        'PASSWORD': '12345',               | 
+        'HOST': 'localhost',               |
+        'PORT': '3306',                    |    
+    }                                      |
+}                                          | 
+                                           | 
+create a database in phpmyadmin makeadd----
 
+#create model then
+class user(models.Model):
+   username = models.CharField(max_length=60)
+   phone = models.IntegerField()
+   email = models.CharField(max_length=15)
+   pass1= models.CharField(max_length=60)
+   pass2 =  models.CharField(max_length=60)
+
+
+
+
+
+in views.py
+if request.method=="POST":
+		username= request.POST.get('username')
+		email= request.POST.get('email')
+		phone= request.POST.get('phone')
+		pass1= request.POST.get('pass1')
+		pass2= request.POST.get('pass2')
