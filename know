@@ -194,3 +194,36 @@ if request.method=="POST":
 		phone= request.POST.get('phone')
 		pass1= request.POST.get('pass1')
 		pass2= request.POST.get('pass2')
+
+
+
+
+
+from django.db import models
+
+# Create your models here.
+class user(models.Model):
+   username = models.CharField(max_length=60)
+   #pin = models.CharField(max_length=60)
+   phone = models.IntegerField()
+   email = models.CharField(max_length=15)
+   pass1= models.CharField(max_length=60)
+   pass2 =  models.CharField(max_length=60)
+
+
+
+from django.shortcuts import render
+from .models import user
+def home(request):
+	if request.method=="POST":
+		username=request.POST.get('username')
+		#pin=request.method.get(pin)
+		phone=request.POST.get('phone')
+		#job=request.method.get(job)
+		email=request.POST.get('email')
+		pass1=request.POST.get('pass1')
+		pass2=request.POST.get('pass2')
+		if pass1==pass2:
+			user(username=username,phone=phone,email=email,pass1=pass1,pass2=pass2).save()
+		
+	return render(request,"home.html")
